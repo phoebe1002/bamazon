@@ -30,7 +30,8 @@
     - 3
     * order quantity(3) is greater than stock quantity (2)
 * **End goal** - Expect App prompts **"Insufficient quantity!"** message to the customer
-* see demo video [here](chrome-extension://mmeijimgabbpbgpdklnllpncmdofkcpn/app.html#/files/f034703b-6639-4321-y1c1-55b71fea8929)
+* see demo video [here](https://drive.google.com/file/d/1_Mp-exGz9eQnOevTZN9cxC8pnh06KsXX/view)
+
 
 ## Demo # 2 - Show a Successful Order
 ### On *terminal* 
@@ -44,4 +45,5 @@
 * **End goal** 
 - Expect App prompts **"item added!"** message to the customer
 - Expect expecting *stock_quantity* for *item_id* = 4 updated to *120* in table products.
-* see demo video [here](chrome-extension://mmeijimgabbpbgpdklnllpncmdofkcpn/app.html#/files/9ec038e8-14f4-48db-y156-9b9d2a6d7133)
+
+* see demo video [here](https://drive.google.com/file/d/1QlOqM48Q0fJwrqo3EequHiMTz6JC3rQJ/view)
