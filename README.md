@@ -29,7 +29,8 @@
 4. Enter *quantity* to purchase
     - 3
     * order quantity(3) is greater than stock quantity (2)
--**End goal** 
+    
+### End goal
 * Expect App prompts **"Insufficient quantity!"** message to the customer
 * see demo video [here](https://drive.google.com/file/d/1_Mp-exGz9eQnOevTZN9cxC8pnh06KsXX/view)
 
@@ -43,7 +44,8 @@
     - 4
 4. Enter *quantity* to purchase
     - 80
--**End goal** 
+    
+### End goal
 * Expect App prompts **"item added!"** message to the customer
 * Expect *stock_quantity* for *item_id* = 4 is updated to *120* in table products.
 
