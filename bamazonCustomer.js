@@ -17,7 +17,8 @@ var connection = mysql.createConnection({
 
 connection.connect(function(err) {
 	if (err) throw err;
-	console.log("connected as id " + connection.threadId);
+	//Testing:
+	//console.log("connected as id " + connection.threadId);
 	querySaleProducts();
 	
 });
@@ -79,21 +80,39 @@ function queryOrder() {
 		var query = "SELECT * FROM products WHERE ?";
 
 		connection.query(query, { item_id: answer.order_id }, function(err, res) {
-			console.table(res);
+		//	console.table(res);
 			var i = 0;
-		if(answer.order_quantity > res[i].stock_quantity ){
+		if(answer.order_quantity > res[i].stock_quantity){
 			console.log("Insufficient quantity!");
 			console.log("We only have " + res[i].stock_quantity + " '" + res[i].product_name + "' left in stock!")
 		} 
 		else{
 			var cartTotal = answer.order_quantity * res[i].price;
 			console.log("'" + res[i].product_name + "' is added to your cart");
-			console.log("Cart total: $" + numberWithCommas(cartTotal));
-		
-			updateStock();
+			console.log("Cart total: $" + parseFloat(numberWithCommas(cartTotal)).toFixed(2));
+
+			var stockLeft = res[i].stock_quantity - answer.order_quantity 
+			updateStock(stockLeft, answer.order_id);
 		}
 		});
 	});
+}
+
+function updateStock(sold, target) {
+  var query = connection.query(
+    "UPDATE products SET ? WHERE ?",
+    [
+      {
+        stock_quantity: sold
+      },
+      {
+        item_id: target
+      }
+    ],
+    function(err, res) {
+			console.log("Testing purpose: " + res.affectedRows + " products updated!\n");
+    }
+	);
 }
 
 // Format price with comma separator
