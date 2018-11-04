@@ -44,6 +44,6 @@
     - 80
 * **End goal** 
 - Expect App prompts **"item added!"** message to the customer
-- Expect expecting *stock_quantity* for *item_id* = 4 updated to *120* in table products.
+- Expect *stock_quantity* for *item_id* = 4 is updated to *120* in table products.
 
 * see demo video [here](https://drive.google.com/file/d/1QlOqM48Q0fJwrqo3EequHiMTz6JC3rQJ/view)
