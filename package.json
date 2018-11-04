@@ -1,0 +1,25 @@
+{
+  "name": "bamazon",
+  "version": "1.0.0",
+  "description": "## Supporting Files * `schema.sql`     - Stores MySQL scripts to be excuted on MySQL Workbench.     - Introduces required database, tables, columns and data types we will use for the app         * Database: bamazon_db         * Tables:             - products * `bamazonManager.js`     - Node application handles the orders from customers and depletes stock from the store's inventory",
+  "main": "bamazonCustomer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phoebe1002/bamazon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phoebe1002/bamazon/issues"
+  },
+  "homepage": "https://github.com/phoebe1002/bamazon#readme",
+  "dependencies": {
+    "inquirer": "^6.2.0",
+    "mysql": "^2.16.0",
+    "request": "^2.88.0"
+  }
+}
